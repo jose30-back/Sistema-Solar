@@ -4,10 +4,8 @@ import dev.personal.java.sistema.solar.model.Planet;
 
 public class View {
 
-    Planet planet; 
-
-    public void printPlanet (){
-        System.out.println("-------Planet-------");
+    public void printPlanet (Planet planet){
+        System.out.println("--------------Planet-------------");
         System.out.println("Nombre:" + planet.getName());
         System.out.println("Numero de satelites: " + planet.getNumberOfSatellites());
         System.out.println("Masa: " + planet.getMass());
@@ -18,14 +16,9 @@ public class View {
         System.out.println("Observable?: " + planet.isObservable());
         System.out.println("Periodo orbital: " + planet.getOrbitalPeriod());
         System.out.println("Periodo de rotacion: " + planet.getRotationPeriod());
-    }
-
-    public void printDensity (){ 
-        System.out.println("Densidad: " + planet.calculateDensity());
-    }
-
-    public void printIfObservable () {
+        System.out.println("La densidad del planeta es: " + planet.calculateDensity());
         System.out.println("El planeta es: " + planet.isOutside());
     }
+
 }
 
