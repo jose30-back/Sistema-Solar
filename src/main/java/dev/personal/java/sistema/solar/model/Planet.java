@@ -63,8 +63,12 @@ public class Planet {
         return typeOfPlanet;
     }
 
-    public boolean isObservable() {
-        return observable;
+    public String isObservable() {
+        if (observable == true) {
+            return "Si";
+        } else {
+            return "No";
+        }
     }
 
     public double calculateDensity() {
@@ -74,9 +78,9 @@ public class Planet {
 
     public String isOutside() {
         if (distanceToTheSun > 314155527 || distanceToTheSun > 508632758) {
-            return "El planeta es exterior";
+            return "Exterior";
         } else {
-            return "El planeta es interior";
+            return "Interior";
         }
     }
 
